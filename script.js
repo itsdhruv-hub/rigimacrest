@@ -1,19 +1,3 @@
-const siteLoader = document.getElementById('site-loader');
-const hideLoader = () => {
-  if (!siteLoader || siteLoader.classList.contains('is-done')) return;
-  siteLoader.classList.add('is-done');
-  document.body.classList.remove('is-loading');
-};
-
-if (siteLoader) {
-  const minShow = new Promise((resolve) => setTimeout(resolve, 1150));
-  const pageLoaded = document.readyState === 'complete'
-    ? Promise.resolve()
-    : new Promise((resolve) => window.addEventListener('load', resolve, { once: true }));
-  Promise.all([minShow, pageLoaded]).then(hideLoader);
-  setTimeout(hideLoader, 2600);
-}
-
 const menuToggle = document.querySelector('.menu-toggle');
 const siteNav = document.querySelector('.site-nav');
 

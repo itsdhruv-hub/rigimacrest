@@ -13,22 +13,27 @@
   <body class="is-loading">
     <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
     <div class="site-loader" id="site-loader" role="status" aria-label="Loading Rigima Crest Infra LLP">
-      <div class="loader-bg-grid"></div>
-      <div class="loader-aura"></div>
-      <div class="loader-stage">
-        <div class="loader-ring loader-ring-outer"></div>
-        <div class="loader-ring loader-ring-mid"></div>
-        <div class="loader-ring loader-ring-inner"></div>
-        <div class="loader-medallion">
-          <div class="loader-medallion-face">
-            <img src="assets/logo.png" alt="Rigima Crest Infra LLP" />
-          </div>
+      <canvas class="loader-canvas" id="loader-canvas" aria-hidden="true"></canvas>
+      <div class="loader-vignette" aria-hidden="true"></div>
+
+      <div class="loader-brand-stage">
+        <div class="loader-logo-wrap">
+          <div class="loader-logo-glow" aria-hidden="true"></div>
+          <img class="loader-logo" src="assets/logo.png" alt="Rigima Crest Infra LLP" />
+          <span class="loader-logo-sweep" aria-hidden="true"></span>
         </div>
+
+        <p class="loader-tagline">BUILDING LANDMARKS. CREATING LEGACIES.</p>
       </div>
-      <div class="loader-copy">
-        <span class="loader-kicker">ARJAN ODEDRA · EST. 1991</span>
-        <p class="loader-title">Rigima Crest Infra LLP</p>
-        <div class="loader-bar"><span></span></div>
+
+      <div class="loader-progress-hud">
+        <div class="loader-progress-track">
+          <span class="loader-progress-fill"></span>
+        </div>
+        <div class="loader-progress-meta">
+          <span class="loader-status-text">Preparing Your Experience</span>
+          <span class="loader-percent">0%</span>
+        </div>
       </div>
     </div>
 
@@ -130,15 +135,15 @@
             </div>
             <div class="owners-grid">
               <article class="owner-card reveal" data-tilt>
-                <div class="owner-photo"><img src="assets/owner-1.jpg" alt="Arjan Odedra" onerror="this.remove();this.parentElement.classList.add('is-placeholder');" /><span class="owner-monogram">AO</span><span class="owner-photo-label">40+ Yrs Experience</span><span class="owner-number">01</span></div>
+                <div class="owner-photo"><img src="assets/owner-1.jpg" alt="Arjan Odedra" onerror="this.parentElement?.classList.add('is-placeholder');this.remove();" /><span class="owner-monogram">AO</span><span class="owner-photo-label">40+ Yrs Experience</span><span class="owner-number">01</span></div>
                 <div class="owner-meta"><h3>Arjan Odedra</h3><p>Real Estate Developer &amp; Township Builder</p><span class="owner-line"></span></div>
               </article>
               <article class="owner-card reveal" data-tilt>
-                <div class="owner-photo"><img src="assets/owner-2.jpg" alt="Tejal Odedra" onerror="this.remove();this.parentElement.classList.add('is-placeholder');" /><span class="owner-monogram">TO</span><span class="owner-photo-label">Promoter</span><span class="owner-number">02</span></div>
+                <div class="owner-photo"><img src="assets/owner-2.jpg" alt="Tejal Odedra" onerror="this.parentElement?.classList.add('is-placeholder');this.remove();" /><span class="owner-monogram">TO</span><span class="owner-photo-label">Promoter</span><span class="owner-number">02</span></div>
                 <div class="owner-meta"><h3>Tejal Odedra</h3><p>Owner &amp; Promoter</p><span class="owner-line"></span></div>
               </article>
               <article class="owner-card reveal" data-tilt>
-                <div class="owner-photo"><img src="assets/owner-3.jpg" alt="Pooja Odedra" onerror="this.remove();this.parentElement.classList.add('is-placeholder');" /><span class="owner-monogram">PO</span><span class="owner-photo-label">Promoter</span><span class="owner-number">03</span></div>
+                <div class="owner-photo"><img src="assets/owner-3.jpg" alt="Pooja Odedra" onerror="this.parentElement?.classList.add('is-placeholder');this.remove();" /><span class="owner-monogram">PO</span><span class="owner-photo-label">Promoter</span><span class="owner-number">03</span></div>
                 <div class="owner-meta"><h3>Pooja Odedra</h3><p>Owner &amp; Promoter</p><span class="owner-line"></span></div>
               </article>
             </div>
@@ -658,6 +663,8 @@
       <span class="whatsapp-float-label">WhatsApp</span>
     </a>
 
-    <script src="script.js"></script>
+    <script src="vendor/three.min.js" defer></script>
+    <script src="preloader.js" defer></script>
+    <script src="script.js" defer></script>
   </body>
 </html>
