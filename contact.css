@@ -1,0 +1,188 @@
+/* Contact Us Page — Architectural Concierge & Interactive Studio */
+.ct-main{background:#fbfaf7}
+
+/* 1. Concierge Split Hero */
+.ct-hero{background:radial-gradient(circle at 80% 22%,#0c385c 0%,#04182b 58%,#020f1c 100%);color:#fff;overflow:hidden;padding:64px 8% 76px;position:relative}
+.ct-hero:before{background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:68px 68px;content:"";inset:0;pointer-events:none;position:absolute}
+.ct-hero-orbit{animation:orbit-spin 48s linear infinite;border:1px solid rgba(240,212,132,.2);border-radius:50%;height:620px;pointer-events:none;position:absolute;right:-140px;top:-160px;width:620px}
+.ct-hero-glow{background:radial-gradient(circle,rgba(219,185,77,.18) 0%,transparent 70%);border-radius:50%;filter:blur(44px);height:380px;left:-100px;pointer-events:none;position:absolute;top:-100px;width:380px}
+
+.ct-hero-grid{align-items:center;display:grid;gap:48px;grid-template-columns:1.08fr .92fr;margin:0 auto;max-width:1280px;position:relative;z-index:2}
+.ct-status-pill{align-items:center;background:rgba(255,255,255,.06);border:1px solid rgba(240,212,132,.42);border-radius:999px;color:var(--gold-light);display:inline-flex;font-size:10px;font-weight:700;gap:7px;letter-spacing:.16em;margin-bottom:20px;padding:8px 15px;text-transform:uppercase}
+.ct-hero-copy h1{font-family:var(--serif);font-size:clamp(2.7rem,4.6vw,4.9rem);font-weight:500;letter-spacing:-.055em;line-height:.98;margin:0 0 20px}
+.ct-hero-copy h1 em{background:linear-gradient(120deg,var(--gold),var(--gold-light),var(--gold));-webkit-background-clip:text;background-clip:text;color:transparent;font-style:italic;font-weight:500}
+.ct-hero-lede{color:#c0d0da;font-size:15.5px;line-height:1.72;margin:0 0 30px;max-width:560px}
+
+/* 3D Interactive Direct Channel Cards */
+.ct-direct-grid{display:grid;gap:12px;grid-template-columns:1fr}
+.ct-direct-card{align-items:center;background:rgba(255,255,255,.055);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.15);border-radius:18px;display:flex;gap:16px;justify-content:space-between;overflow:hidden;padding:16px 20px;position:relative;transition:background .3s ease,border-color .3s ease,box-shadow .3s ease,transform .3s ease}
+.ct-direct-card:hover{background:rgba(255,255,255,.1);border-color:var(--gold-light);box-shadow:0 18px 40px rgba(0,0,0,.35)}
+.ct-direct-left{align-items:center;display:flex;gap:14px;min-width:0}
+.ct-direct-icon{align-items:center;background:rgba(219,185,77,.15);border:1px solid rgba(240,212,132,.45);border-radius:13px;color:var(--gold-light);display:flex;flex:0 0 44px;height:44px;justify-content:center;transition:background .3s ease,color .3s ease,transform .35s ease;width:44px}
+.ct-direct-icon svg{fill:none;height:20px;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.8;width:20px}
+.ct-direct-card:hover .ct-direct-icon{background:var(--gold);border-color:var(--gold);color:var(--navy);transform:rotate(-8deg) scale(1.06)}
+.ct-direct-meta{min-width:0}
+.ct-direct-meta small{color:var(--gold-light);display:block;font-size:9.5px;font-weight:700;letter-spacing:.16em;margin-bottom:3px;text-transform:uppercase}
+.ct-direct-meta strong{color:#fff;display:block;font-family:var(--serif);font-size:18px;font-weight:500;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.ct-direct-actions{align-items:center;display:flex;flex-shrink:0;gap:8px}
+.ct-copy-btn{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:999px;color:#dce7ee;cursor:pointer;font-size:10.5px;font-weight:600;padding:6px 12px;transition:background .2s ease,border-color .2s ease,color .2s ease}
+.ct-copy-btn:hover,.ct-copy-btn.is-copied{background:var(--gold);border-color:var(--gold);color:var(--navy)}
+.ct-go-btn{align-items:center;border:1px solid rgba(240,212,132,.45);border-radius:50%;color:var(--gold-light);display:flex;font-size:15px;height:36px;justify-content:center;transition:background .25s ease,color .25s ease,transform .3s ease;width:36px}
+.ct-direct-card:hover .ct-go-btn{background:var(--gold);border-color:var(--gold);color:var(--navy);transform:rotate(45deg)}
+
+/* Right 3D Animated Project Showcase Deck */
+.ct-showcase{background:linear-gradient(160deg,rgba(255,255,255,.08),rgba(255,255,255,.025));backdrop-filter:blur(12px);border:1px solid rgba(240,212,132,.44);border-radius:26px;box-shadow:0 30px 70px rgba(0,0,0,.44);overflow:hidden;padding:22px;position:relative}
+.ct-showcase-top{align-items:center;display:flex;justify-content:space-between;margin-bottom:16px}
+.ct-showcase-kicker{align-items:center;color:var(--gold-light);display:inline-flex;font-size:10px;font-weight:700;gap:6px;letter-spacing:.16em;text-transform:uppercase}
+.ct-showcase-dots{display:flex;gap:6px}
+.ct-sdot{background:rgba(255,255,255,.22);border:0;border-radius:999px;cursor:pointer;height:6px;padding:0;transition:background .3s ease,width .3s ease;width:10px}
+.ct-sdot.is-active{background:var(--gold);width:26px}
+
+.ct-stack-viewport{height:310px;perspective:1100px;position:relative}
+.ct-slide{border:1px solid rgba(240,212,132,.36);border-radius:20px;box-shadow:0 20px 44px rgba(0,0,0,.38);inset:0;opacity:0;overflow:hidden;pointer-events:none;position:absolute;transform:translate3d(26px,14px,-80px) scale(.92);transition:opacity .6s ease,transform .65s cubic-bezier(.22,.8,.25,1);z-index:1}
+.ct-slide.is-next{opacity:.42;transform:translate3d(14px,8px,-35px) scale(.96);z-index:2}
+.ct-slide.is-active{opacity:1;pointer-events:auto;transform:translate3d(0,0,0) scale(1);z-index:3}
+.ct-slide img{display:block;height:100%;object-fit:cover;transition:transform .9s cubic-bezier(.22,.8,.25,1);width:100%}
+.ct-showcase:hover .ct-slide.is-active img{transform:scale(1.06)}
+.ct-slide:after{background:linear-gradient(180deg,rgba(4,24,40,.08) 25%,rgba(4,24,40,.92) 100%);content:"";inset:0;position:absolute;z-index:1}
+.ct-slide-overlay{bottom:0;left:0;padding:24px 22px;position:absolute;right:0;z-index:2}
+.ct-slide-badge{background:var(--gold);border-radius:999px;color:var(--navy);display:inline-block;font-size:9px;font-weight:700;letter-spacing:.14em;margin-bottom:10px;padding:5px 11px;text-transform:uppercase}
+.ct-slide-badge.is-upcoming{background:rgba(4,24,40,.88);border:1px solid var(--gold);color:var(--gold-light)}
+.ct-slide-overlay h3{color:#fff;font-family:var(--serif);font-size:25px;font-weight:500;margin:0 0 5px}
+.ct-slide-overlay p{color:#d1dfe7;font-size:13px;line-height:1.45;margin:0}
+
+.ct-showcase-foot{margin-top:16px}
+.ct-showcase-progress{background:rgba(255,255,255,.12);border-radius:999px;height:2px;margin-bottom:14px;overflow:hidden;width:100%}
+.ct-showcase-progress span{background:linear-gradient(90deg,var(--gold),var(--gold-light));display:block;height:100%;transition:width .45s ease;width:25%}
+.ct-showcase-actions{align-items:center;display:flex;justify-content:space-between;gap:12px}
+.ct-slide-next{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:999px;color:#fff;cursor:pointer;font-size:11.5px;font-weight:600;padding:8px 15px;transition:background .25s ease,border-color .25s ease,color .25s ease}
+.ct-slide-next:hover{background:var(--gold);border-color:var(--gold);color:var(--navy)}
+.ct-showcase-link{align-items:center;color:var(--gold-light);display:inline-flex;font-size:12px;font-weight:700;gap:7px;transition:transform .25s ease}
+.ct-showcase-link:hover{transform:translateX(3px)}
+
+/* 2. Interactive Consultation Studio */
+.ct-studio{background:#fbfaf7;padding:90px 8%}
+.ct-studio-grid{align-items:start;display:grid;gap:40px;grid-template-columns:.92fr 1.08fr;margin:0 auto;max-width:1280px}
+.ct-studio-intro h2{color:var(--navy);font-family:var(--serif);font-size:clamp(2.1rem,3.4vw,3.35rem);font-weight:500;letter-spacing:-.05em;line-height:1.05;margin:0 0 14px}
+.ct-studio-intro h2 em{color:#b08216;font-style:italic}
+.ct-studio-intro>p{color:var(--muted);font-size:14.5px;line-height:1.68;margin:0 0 28px}
+
+.ct-step-group{margin-bottom:24px}
+.ct-step-label{color:var(--navy);display:block;font-size:10.5px;font-weight:700;letter-spacing:.16em;margin-bottom:10px;text-transform:uppercase}
+.ct-chip-list{display:flex;flex-wrap:wrap;gap:8px}
+.ct-chip{background:#f1eee5;border:1px solid rgba(7,43,72,.12);border-radius:999px;color:var(--navy);cursor:pointer;font-size:12px;font-weight:600;padding:9px 15px;transition:background .25s ease,border-color .25s ease,color .25s ease,transform .25s ease}
+.ct-chip:hover,.ct-chip.is-active{background:var(--navy);border-color:var(--navy);color:var(--gold-light);transform:translateY(-2px)}
+
+.ct-brief-preview{background:linear-gradient(155deg,#072b48 0%,#041a2d 100%);border:1px solid rgba(219,185,77,.42);border-radius:20px;color:#fff;padding:22px 24px}
+.ct-brief-preview small{color:var(--gold-light);display:block;font-size:9.5px;font-weight:700;letter-spacing:.18em;margin-bottom:8px;text-transform:uppercase}
+.ct-brief-preview p{color:#dbe6ed;font-family:var(--serif);font-size:18px;line-height:1.4;margin:0}
+
+/* Elevated Form Card */
+.ct-form-card{background:#fff;border:1px solid rgba(7,43,72,.12);border-radius:26px;box-shadow:0 24px 60px rgba(7,43,72,.09);padding:34px 36px;position:relative}
+.ct-form-card:before{background:linear-gradient(90deg,var(--gold),var(--navy));border-radius:26px 26px 0 0;content:"";height:4px;left:0;position:absolute;right:0;top:0}
+.ct-form-head{align-items:center;display:flex;justify-content:space-between;margin-bottom:24px}
+.ct-form-head h3{color:var(--navy);font-family:var(--serif);font-size:26px;font-weight:500;margin:0}
+.ct-form-head span{color:#9a771b;font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
+
+.ct-form-grid{display:grid;gap:16px;grid-template-columns:repeat(2,minmax(0,1fr));margin-bottom:16px}
+.ct-field{display:flex;flex-direction:column;gap:6px}
+.ct-field-full{grid-column:1/-1}
+.ct-field span{color:var(--navy);font-size:10.5px;font-weight:700;letter-spacing:.13em;text-transform:uppercase}
+.ct-field input,.ct-field textarea,.ct-field select{background:#f7f5ee;border:1px solid rgba(7,43,72,.14);border-radius:12px;color:var(--ink);font-family:var(--sans);font-size:14px;outline:none;padding:13px 15px;transition:background .25s ease,border-color .25s ease,box-shadow .25s ease;width:100%}
+.ct-field textarea{min-height:105px;resize:vertical}
+.ct-field input:focus,.ct-field textarea:focus,.ct-field select:focus{background:#fff;border-color:var(--gold);box-shadow:0 0 0 4px rgba(219,185,77,.18)}
+
+.ct-form-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+.ct-email-btn{align-items:center;background:var(--navy);border:1px solid var(--navy);border-radius:3px;color:#fff;cursor:pointer;display:inline-flex;font-size:12px;font-weight:700;gap:12px;justify-content:center;letter-spacing:.04em;padding:16px 22px;text-transform:uppercase;transition:background .25s ease,transform .25s ease}
+.ct-email-btn:hover{background:var(--blue);transform:translateY(-3px)}
+.ct-form-status{color:var(--navy);font-size:13px;font-weight:600;line-height:1.5;margin-top:14px}
+.ct-form-status.is-error{color:#b91c1c}
+.ct-form-status a{border-bottom:1px solid var(--gold);color:var(--navy);margin-left:8px}
+
+/* 3. Interactive Office & Regional Desks Map Showcase */
+.ct-locations{background:#efede4;padding:86px 8%}
+.ct-loc-grid{align-items:stretch;display:grid;gap:34px;grid-template-columns:.95fr 1.05fr;margin:0 auto;max-width:1280px}
+.ct-desk-list{display:flex;flex-direction:column;gap:14px}
+.ct-desk-card{background:#fbfaf7;border:1px solid rgba(7,43,72,.11);border-left:3px solid transparent;border-radius:18px;cursor:pointer;padding:22px 24px;transition:background .3s ease,border-color .3s ease,box-shadow .3s ease,transform .3s ease}
+.ct-desk-card:hover,.ct-desk-card.is-active{background:#fff;border-color:rgba(219,185,77,.75);border-left-color:var(--gold);box-shadow:0 18px 36px rgba(7,43,72,.1);transform:translateX(6px)}
+.ct-desk-card small{color:#a87b12;display:block;font-size:10px;font-weight:700;letter-spacing:.16em;margin-bottom:5px;text-transform:uppercase}
+.ct-desk-card h3{color:var(--navy);font-family:var(--serif);font-size:21px;font-weight:600;margin:0 0 6px}
+.ct-desk-card p{color:var(--muted);font-size:13px;line-height:1.55;margin:0}
+
+/* Story-Wise Animated Video Cinema Stage */
+.ct-cinema{background:linear-gradient(155deg,#041d31 0%,#062642 100%);border:1px solid rgba(240,212,132,.44);border-radius:26px;box-shadow:0 28px 65px rgba(7,43,72,.2);color:#fff;display:flex;flex-direction:column;overflow:hidden;padding:18px;position:relative}
+.ct-story-bars{display:grid;gap:8px;grid-template-columns:repeat(3,1fr);margin-bottom:14px;position:relative;z-index:3}
+.ct-story-seg{background:rgba(255,255,255,.16);border:0;border-radius:999px;cursor:pointer;height:4px;overflow:hidden;padding:0;position:relative;transition:height .2s ease}
+.ct-story-seg:hover{height:6px}
+.ct-story-seg span{background:linear-gradient(90deg,var(--gold),var(--gold-light));border-radius:999px;display:block;height:100%;transform:scaleX(0);transform-origin:left;width:100%}
+
+.ct-cinema-stage{border:1px solid rgba(240,212,132,.3);border-radius:20px;flex:1;min-height:330px;overflow:hidden;position:relative}
+.ct-story-scene{inset:0;opacity:0;overflow:hidden;pointer-events:none;position:absolute;transform:scale(1.03);transition:opacity .75s cubic-bezier(.22,.8,.25,1),transform .9s cubic-bezier(.22,.8,.25,1);z-index:1}
+.ct-story-scene.is-active{opacity:1;pointer-events:auto;transform:scale(1);z-index:2}
+.ct-story-scene:after{background:linear-gradient(180deg,rgba(3,17,30,.52) 0%,rgba(3,17,30,.12) 40%,rgba(3,17,30,.92) 100%);content:"";inset:0;pointer-events:none;position:absolute;z-index:2}
+.ct-story-video{display:block;height:100%;object-fit:cover;width:100%}
+.ct-story-scan{animation:ct-cinema-scan 5s ease-in-out infinite;background:linear-gradient(180deg,transparent,rgba(219,185,77,.22),transparent);height:54px;left:0;pointer-events:none;position:absolute;right:0;z-index:3}
+@keyframes ct-cinema-scan{0%{top:-60px;opacity:0}20%{opacity:1}80%{opacity:1}100%{top:100%;opacity:0}}
+
+.ct-kenburns-reel{height:100%;position:relative;width:100%}
+.kb-shot{height:100%;inset:0;object-fit:cover;position:absolute;width:100%}
+.kb-shot-a{animation:kb-pan-a 12s ease-in-out infinite alternate}
+.kb-shot-b{animation:kb-pan-b 12s ease-in-out infinite alternate;opacity:0}
+@keyframes kb-pan-a{0%{transform:scale(1) translate(0,0)}100%{transform:scale(1.12) translate(-2%,-1.5%)}}
+@keyframes kb-pan-b{0%,42%{opacity:0;transform:scale(1.08) translate(2%,1%)}55%,100%{opacity:1;transform:scale(1.01) translate(-1%,0)}}
+
+.ct-cinema-hud-top{align-items:center;display:flex;justify-content:space-between;left:18px;position:absolute;right:18px;top:16px;z-index:4}
+.ct-cinema-badge{align-items:center;background:rgba(4,24,40,.82);backdrop-filter:blur(8px);border:1px solid rgba(240,212,132,.48);border-radius:999px;color:var(--gold-light);display:inline-flex;font-size:10px;font-weight:700;gap:6px;letter-spacing:.14em;padding:7px 13px;text-transform:uppercase}
+.ct-cinema-controls{display:flex;gap:7px}
+.ct-cinema-btn{align-items:center;background:rgba(4,24,40,.82);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.24);border-radius:50%;color:#fff;cursor:pointer;display:flex;font-size:12px;height:34px;justify-content:center;transition:background .25s ease,border-color .25s ease,color .25s ease,transform .25s ease;width:34px}
+.ct-cinema-btn:hover{background:var(--gold);border-color:var(--gold);color:var(--navy);transform:scale(1.08)}
+
+.ct-cinema-caption{bottom:20px;left:20px;position:absolute;right:20px;z-index:4}
+.ct-cinema-caption.is-updating{animation:ct-cap-rise .45s cubic-bezier(.22,.8,.25,1)}
+@keyframes ct-cap-rise{from{opacity:.3;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+.ct-cinema-caption h3{color:#fff;font-family:var(--serif);font-size:clamp(1.4rem,2.1vw,1.95rem);font-weight:500;margin:0 0 6px}
+.ct-cinema-caption p{color:#d1dfe7;font-size:13px;line-height:1.5;margin:0 0 12px;max-width:480px}
+.ct-story-tags{display:flex;flex-wrap:wrap;gap:6px}
+.ct-story-tags span{background:rgba(255,255,255,.12);backdrop-filter:blur(6px);border:1px solid rgba(240,212,132,.35);border-radius:999px;color:var(--gold-light);font-size:10.5px;font-weight:600;padding:4px 10px}
+
+.ct-cinema-foot{align-items:center;display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between;padding:16px 6px 4px}
+.ct-cinema-foot small{color:var(--gold-light);display:block;font-size:10px;font-weight:700;letter-spacing:.14em;margin-bottom:3px;text-transform:uppercase}
+.ct-cinema-foot p{color:#d3e0e8;font-size:13px;margin:0}
+
+/* 4. Interactive FAQ Accordion */
+.ct-faq{background:var(--navy-deep);color:#fff;padding:86px 8%}
+.ct-faq-wrap{margin:0 auto;max-width:1020px}
+.ct-faq-list{border-top:1px solid rgba(255,255,255,.14);margin-top:34px}
+.ct-faq-item{border-bottom:1px solid rgba(255,255,255,.14);transition:background .25s ease}
+.ct-faq-item.is-open{background:rgba(255,255,255,.035)}
+.ct-faq-btn{align-items:center;background:none;border:0;color:#fff;cursor:pointer;display:flex;gap:16px;justify-content:space-between;padding:22px 12px;text-align:left;width:100%}
+.ct-faq-btn strong{font-family:var(--serif);font-size:clamp(1.15rem,1.7vw,1.45rem);font-weight:500;transition:color .25s ease}
+.ct-faq-btn:hover strong,.ct-faq-item.is-open .ct-faq-btn strong{color:var(--gold-light)}
+.ct-faq-plus{align-items:center;border:1px solid rgba(240,212,132,.45);border-radius:50%;color:var(--gold-light);display:flex;flex:0 0 34px;font-size:18px;height:34px;justify-content:center;transition:transform .3s ease,background .25s ease,color .25s ease;width:34px}
+.ct-faq-item.is-open .ct-faq-plus{background:var(--gold);color:var(--navy);transform:rotate(45deg)}
+.ct-faq-ans{max-height:0;overflow:hidden;padding:0 12px;transition:max-height .4s ease,padding .4s ease}
+.ct-faq-item.is-open .ct-faq-ans{max-height:220px;padding:0 12px 22px}
+.ct-faq-ans p{color:#bfd0da;font-size:14px;line-height:1.7;margin:0;max-width:780px}
+
+@media(max-width:1240px){
+  .ct-hero,.ct-studio,.ct-locations,.ct-faq{padding-left:5%;padding-right:5%}
+}
+@media(max-width:1100px){
+  .ct-hero-grid,.ct-studio-grid,.ct-loc-grid{grid-template-columns:1fr}
+}
+@media(max-width:600px){
+  .ct-hero{padding:38px 5.5% 52px}
+  .ct-direct-card{flex-wrap:wrap;padding:14px 16px}
+  .ct-showcase{padding:16px}
+  .ct-stack-viewport{height:245px}
+  .ct-slide-overlay h3{font-size:21px}
+  .ct-form-grid{grid-template-columns:1fr}
+  .ct-studio,.ct-locations,.ct-faq{padding:56px 5.5%}
+  .ct-form-card{border-radius:20px;padding:24px 18px}
+  .ct-form-actions{flex-direction:column}
+  .ct-form-actions>*{width:100%}
+  .ct-cinema{padding:14px}
+  .ct-cinema-stage{min-height:280px}
+  .ct-cinema-foot{flex-direction:column;align-items:stretch}
+  .ct-cinema-foot .button{width:100%}
+}

@@ -1,0 +1,486 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Current & upcoming real estate and township developments by Arjan Odedra & Rigima Crest Infra LLP across Lothal, Dholera SIR, Dwarka, Pipli (Ahmedabad), and Gujarat." />
+    <title>Projects | Arjan Odedra &amp; Rigima Crest Infra LLP — Gujarat</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="vendor/leaflet/leaflet.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="projects.css" />
+  </head>
+  <body>
+    <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+
+    <div class="site-shell">
+      <div class="announcement-bar">
+        <div class="eyebrow">REAL ESTATE <span></span> TOWNSHIP BUILDERS <span></span> CONSTRUCTION</div>
+        <div class="announcement-copy"><i class="pulse-dot"></i> 40+ years &amp; 35+ townships across Gujarat (1991 – 2026)</div>
+      </div>
+
+      <header class="site-header" id="top">
+        <a class="brand" href="index.html" aria-label="Rigima Crest home">
+          <img src="assets/logo.png" alt="Rigima Crest Infra LLP" />
+        </a>
+        <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false"><span></span><span></span></button>
+        <nav class="site-nav" aria-label="Primary navigation">
+          <a href="index.html">Home</a>
+          <a href="about.html">About Us</a>
+          <a class="active" href="projects.html">Projects</a>
+          <a href="contact.html">Contact</a>
+          <a class="nav-call" href="tel:+918866119598"><span class="call-icon">↗</span> +91 88661 19598</a>
+        </nav>
+      </header>
+
+      <main class="pj-main">
+        <!-- 1. Panoramic Architectural Command Hero -->
+        <section class="pj-hero" aria-label="Projects Portfolio Overview">
+          <div class="pj-hero-glow"></div>
+          <div class="pj-hero-inner">
+            <div class="pj-hero-top reveal">
+              <div>
+                <p class="section-kicker"><span class="kicker-line"></span> Portfolio · 1991 – 2026</p>
+                <h1>Landmarks across<br /><em>Gujarat’s growth</em> corridors.</h1>
+              </div>
+              <div class="pj-hero-side">
+                <p>From foundational coastal townships in Porbandar to active &amp; upcoming developments around Lothal, Dholera SIR, Dwarka, and Pipli (Ahmedabad) — spanning ₹2 crore to ₹100 crore.</p>
+                <div class="pj-hero-kpi-strip">
+                  <span class="pj-kpi-chip"><strong>02</strong> Active Belts</span>
+                  <span class="pj-kpi-chip"><strong>04</strong> Upcoming Hubs</span>
+                  <span class="pj-kpi-chip"><strong>35+</strong> Townships Created</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="pj-panorama reveal" aria-label="Featured project corridors">
+              <article class="pj-pano-card is-active" data-spotlight>
+                <img src="assets/project-lothal-heritage.jpg" alt="Lothal area township masterplan in Gujarat" />
+                <div class="pj-pano-body">
+                  <span class="pj-pano-pill">Current Belt · 01</span>
+                  <h3>Lothal Heritage Area</h3>
+                  <p>Strategic land &amp; township development neighbouring the Lothal World Heritage Project.</p>
+                  <div class="pj-pano-tags">
+                    <span>Ganeshpura</span>
+                    <span>Memar</span>
+                  </div>
+                </div>
+              </article>
+
+              <article class="pj-pano-card" data-spotlight>
+                <img src="assets/project-dholera-sir.jpg" alt="Dholera SIR smart-city growth corridor" />
+                <div class="pj-pano-body">
+                  <span class="pj-pano-pill">Current Belt · 02</span>
+                  <h3>Around Dholera SIR</h3>
+                  <p>Five high-potential villages positioned around the Dholera Special Investment Region.</p>
+                  <div class="pj-pano-tags">
+                    <span>Pachcham</span>
+                    <span>Gamph</span>
+                    <span>Tagdi</span>
+                    <span>Fedra</span>
+                    <span>Aakru</span>
+                  </div>
+                </div>
+              </article>
+
+              <article class="pj-pano-card" data-spotlight>
+                <img src="assets/project-dwarka-coastal.jpg" alt="Dwarka coastal residential development at sunset" />
+                <div class="pj-pano-body">
+                  <span class="pj-pano-pill is-upcoming">Upcoming Horizons</span>
+                  <h3>Dwarka, Dholera SIR &amp; Pipli</h3>
+                  <p>Next-phase coastal, smart-city, and Ahmedabad district projects under expansion.</p>
+                  <div class="pj-pano-tags">
+                    <span>Dwarka</span>
+                    <span>Dholera SIR</span>
+                    <span>Memar</span>
+                    <span>Pipli (Ahmedabad)</span>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!-- 2. Current Projects Split Dossier -->
+        <section class="pj-current" id="current-projects">
+          <div class="pj-wrap">
+            <div class="pj-head reveal">
+              <div>
+                <p class="section-kicker"><span class="kicker-line"></span> Current Projects</p>
+                <h2>Active development <em>corridors.</em></h2>
+              </div>
+              <p class="pj-head-note">Hover or select any active village below to inspect parcel focus across the Lothal heritage corridor and Dholera SIR belt.</p>
+            </div>
+
+            <div class="pj-dossier-stack">
+              <!-- Dossier 1: Lothal Area -->
+              <article class="pj-dossier reveal" data-tilt data-tilt-soft data-spotlight>
+                <div class="pj-dossier-media">
+                  <img src="assets/project-lothal-heritage.jpg" alt="Ganeshpura and Memar township near Lothal" />
+                  <span class="pj-dossier-badge"><i class="pulse-dot"></i> Active · Lothal Belt</span>
+                  <div class="pj-dossier-caption">
+                    <strong>Lothal Area</strong>
+                    <small>Near Lothal World Heritage Project</small>
+                  </div>
+                </div>
+                <div class="pj-dossier-body">
+                  <span class="pj-dossier-num">CURRENT PROJECT · 01</span>
+                  <h3>Lothal Area: Ganeshpura &amp; Memar</h3>
+                  <p>Working from the land up through bulk acquisition and plotted masterplanning directly in the high-growth Lothal World Heritage Project influence zone.</p>
+                  <div class="pj-village-tabs" role="tablist" aria-label="Lothal area locations">
+                    <button class="pj-village-btn is-active" type="button" data-group="lothal" data-title="Ganeshpura — Active Township Belt" data-desc="Contiguous land parcels positioned along the Lothal heritage access corridor, planned for plotted residential, farmhouse, and mixed-use value creation.">Ganeshpura</button>
+                    <button class="pj-village-btn" type="button" data-group="lothal" data-title="Memar — Heritage Growth Zone" data-desc="Strategic development near Lothal combining current active land consolidation with upcoming next-phase expansion.">Memar</button>
+                  </div>
+                  <div class="pj-village-detail" id="village-detail-lothal">
+                    <strong>Ganeshpura — Active Township Belt</strong>
+                    <span>Contiguous land parcels positioned along the Lothal heritage access corridor, planned for plotted residential, farmhouse, and mixed-use value creation.</span>
+                  </div>
+                  <div class="pj-dossier-actions">
+                    <button class="button button-gold cta-btn-glow" type="button" data-inquire="Lothal Area (Ganeshpura & Memar)">Inquire Lothal Area <span>↗</span></button>
+                    <a class="arrow-link" href="tel:+918866119598">Speak to Land Desk <span>↗</span></a>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Dossier 2: Around Dholera SIR -->
+              <article class="pj-dossier pj-dossier-flip reveal" data-tilt data-tilt-soft data-spotlight>
+                <div class="pj-dossier-media">
+                  <img src="assets/project-dholera-sir.jpg" alt="Dholera SIR surrounding villages growth corridor" />
+                  <span class="pj-dossier-badge"><i class="pulse-dot"></i> Active · 5 Key Villages</span>
+                  <div class="pj-dossier-caption">
+                    <strong>Around Dholera SIR</strong>
+                    <small>Pachcham · Gamph · Tagdi · Fedra · Aakru</small>
+                  </div>
+                </div>
+                <div class="pj-dossier-body">
+                  <span class="pj-dossier-num">CURRENT PROJECT · 02</span>
+                  <h3>Around Dholera SIR</h3>
+                  <p>Five strategically connected growth villages encircling Dholera Special Investment Region — acquiring bulk land, developing civic frameworks, and scaling long-term equity.</p>
+                  <div class="pj-village-tabs" role="tablist" aria-label="Dholera SIR surrounding villages">
+                    <button class="pj-village-btn is-active" type="button" data-group="dholera" data-title="Pachcham — Dholera Belt" data-desc="Prime bulk land corridor near Dholera SIR suited for plotted townships, residential growth, and long-horizon investment.">Pachcham</button>
+                    <button class="pj-village-btn" type="button" data-group="dholera" data-title="Gamph — SIR Influence Zone" data-desc="Strategic contiguous land assembly supporting future industrial, commercial, and residential expansion around Dholera.">Gamph</button>
+                    <button class="pj-village-btn" type="button" data-group="dholera" data-title="Tagdi — Connectivity Node" data-desc="Positioned along key regional transit links connecting Ahmedabad corridors to Dholera SIR.">Tagdi</button>
+                    <button class="pj-village-btn" type="button" data-group="dholera" data-title="Fedra — Highway Access Hub" data-desc="High-visibility corridor linking Fedra–Pipli routes toward the Dholera Special Investment Region.">Fedra</button>
+                    <button class="pj-village-btn" type="button" data-group="dholera" data-title="Aakru — Township Growth Pocket" data-desc="Calm plotted land pockets tailored for residential layouts, farmhouses, and phased land development.">Aakru</button>
+                  </div>
+                  <div class="pj-village-detail" id="village-detail-dholera">
+                    <strong>Pachcham — Dholera Belt</strong>
+                    <span>Prime bulk land corridor near Dholera SIR suited for plotted townships, residential growth, and long-horizon investment.</span>
+                  </div>
+                  <div class="pj-dossier-actions">
+                    <button class="button button-gold cta-btn-glow" type="button" data-inquire="Around Dholera SIR (Pachcham, Gamph, Tagdi, Fedra, Aakru)">Inquire Dholera Belt <span>↗</span></button>
+                    <a class="arrow-link" href="tel:+918866119598">Speak to Land Desk <span>↗</span></a>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!-- 3. Staggered Upcoming Horizons Step-Deck -->
+        <section class="pj-upcoming" id="upcoming-projects">
+          <div class="pj-wrap">
+            <div class="pj-head reveal">
+              <div>
+                <p class="section-kicker"><span class="kicker-line"></span> Upcoming Projects</p>
+                <h2>Next-phase <em>launches.</em></h2>
+              </div>
+              <p class="pj-head-note">Four strategic upcoming destinations extending Arjan Odedra’s 1991–2026 Gujarat footprint into coastal, heritage, and smart-city corridors.</p>
+            </div>
+
+            <div class="pj-upcoming-grid">
+              <article class="pj-up-card reveal" data-tilt data-spotlight>
+                <div class="pj-up-media">
+                  <img src="assets/project-dwarka-coastal.jpg" alt="Dwarka upcoming coastal development" />
+                  <span class="pj-up-tag">Upcoming · 01</span>
+                  <span class="pj-up-num">01</span>
+                </div>
+                <div class="pj-up-body">
+                  <div>
+                    <small>Coastal &amp; Spiritual Hub</small>
+                    <h3>Dwarka</h3>
+                    <p>Returning to Gujarat’s revered coastal horizon with serene residential, bungalow, and plotted estate living.</p>
+                  </div>
+                  <button class="pj-up-cta" type="button" data-inquire="Upcoming: Dwarka">
+                    <span>Request Pre-Launch Info</span>
+                    <i>↗</i>
+                  </button>
+                </div>
+              </article>
+
+              <article class="pj-up-card reveal" data-tilt data-spotlight>
+                <div class="pj-up-media">
+                  <img src="assets/project-dholera-sir.jpg" alt="Dholera SIR upcoming development" />
+                  <span class="pj-up-tag">Upcoming · 02</span>
+                  <span class="pj-up-num">02</span>
+                </div>
+                <div class="pj-up-body">
+                  <div>
+                    <small>Special Investment Region</small>
+                    <h3>Dholera SIR</h3>
+                    <p>Next-generation plotted and commercial-residential developments inside India’s premier smart-city corridor.</p>
+                  </div>
+                  <button class="pj-up-cta" type="button" data-inquire="Upcoming: Dholera SIR">
+                    <span>Request Pre-Launch Info</span>
+                    <i>↗</i>
+                  </button>
+                </div>
+              </article>
+
+              <article class="pj-up-card reveal" data-tilt data-spotlight>
+                <div class="pj-up-media">
+                  <img src="assets/project-lothal-heritage.jpg" alt="Memar near Lothal upcoming project" />
+                  <span class="pj-up-tag">Upcoming · 03</span>
+                  <span class="pj-up-num">03</span>
+                </div>
+                <div class="pj-up-body">
+                  <div>
+                    <small>Heritage Corridor</small>
+                    <h3>Memar — Near by Lothal</h3>
+                    <p>Phased expansion right alongside the Lothal World Heritage Project corridor with bulk land-up masterplanning.</p>
+                  </div>
+                  <button class="pj-up-cta" type="button" data-inquire="Upcoming: Memar — Near by Lothal">
+                    <span>Request Pre-Launch Info</span>
+                    <i>↗</i>
+                  </button>
+                </div>
+              </article>
+
+              <article class="pj-up-card reveal" data-tilt data-spotlight>
+                <div class="pj-up-media">
+                  <img src="assets/about-founder-vision.jpg" alt="Pipli Ahmedabad upcoming township" />
+                  <span class="pj-up-tag">Upcoming · 04</span>
+                  <span class="pj-up-num">04</span>
+                </div>
+                <div class="pj-up-body">
+                  <div>
+                    <small>Ahmedabad Growth Axis</small>
+                    <h3>Pipli (Ahmedabad)</h3>
+                    <p>Strategic land and township development along the vital Ahmedabad–Dholera connectivity spine.</p>
+                  </div>
+                  <button class="pj-up-cta" type="button" data-inquire="Upcoming: Pipli (Ahmedabad)">
+                    <span>Request Pre-Launch Info</span>
+                    <i>↗</i>
+                  </button>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!-- 4. Real Interactive Map of Gujarat & Footprint Explorer -->
+        <section class="pj-explorer" id="footprint">
+          <div class="pj-explorer-grid">
+            <div class="pj-radar-card reveal">
+              <div class="pj-radar-head">
+                <span><i class="pulse-dot"></i> Live Gujarat Map</span>
+                <div class="gj-map-actions">
+                  <button class="gj-reset-btn is-active" type="button" id="map-layer-street">Map</button>
+                  <button class="gj-reset-btn" type="button" id="map-layer-sat">Satellite</button>
+                  <button class="gj-reset-btn" type="button" id="map-reset-btn" title="Reset to full Gujarat view">Full Gujarat ↺</button>
+                </div>
+              </div>
+
+              <div class="gj-map-shell">
+                <div class="gj-leaflet-map" id="gujarat-map" aria-label="Interactive map of Gujarat showing Rigima Crest and Arjan Odedra locations"></div>
+              </div>
+
+              <div class="pj-radar-caption">
+                <span>Focused Pin: <strong id="map-city-readout">Porbandar (21.64° N, 69.63° E)</strong></span>
+                <strong id="radar-active-zone">Porbandar &amp; Origins Belt</strong>
+              </div>
+            </div>
+
+            <div class="reveal">
+              <p class="section-kicker"><span class="kicker-line"></span> Where He Has Worked · 1991 – 2026</p>
+              <h2 style="font-family:var(--serif);font-size:clamp(2rem,3.2vw,3.1rem);font-weight:500;letter-spacing:-.04em;line-height:1.06;margin:0 0 12px">Explore every town &amp; <em style="color:var(--gold);font-style:italic">corridor.</em></h2>
+              <p style="color:#b8cad5;font-size:14px;line-height:1.65;margin:0">Click or hover any location card to fly the interactive Gujarat map straight to that town or corridor.</p>
+
+              <div class="pj-filter-tabs" role="tablist" aria-label="Filter Gujarat locations">
+                <button class="pj-tab is-active" type="button" data-filter="all">All Locations</button>
+                <button class="pj-tab" type="button" data-filter="coastal">Saurashtra &amp; Coastal</button>
+                <button class="pj-tab" type="button" data-filter="urban">Urban Hubs</button>
+                <button class="pj-tab" type="button" data-filter="frontier">Lothal &amp; Dholera SIR</button>
+              </div>
+
+              <div class="pj-location-grid">
+                <div class="pj-loc-tile is-selected" data-group="coastal" data-zone="porbandar" data-city="Porbandar" data-lat="21.6417" data-lng="69.6293" data-coords="21.64° N, 69.63° E"><small>1991 Origin</small><strong>Porbandar</strong></div>
+                <div class="pj-loc-tile" data-group="coastal" data-zone="porbandar" data-city="Chaya" data-lat="21.6272" data-lng="69.6606" data-coords="21.63° N, 69.66° E"><small>Porbandar Belt</small><strong>Chaya</strong></div>
+                <div class="pj-loc-tile" data-group="coastal" data-zone="porbandar" data-city="Pipliya" data-lat="21.7031" data-lng="69.7215" data-coords="21.70° N, 69.72° E"><small>Porbandar Belt</small><strong>Pipliya</strong></div>
+                <div class="pj-loc-tile" data-group="coastal" data-zone="porbandar" data-city="Ranavav" data-lat="21.6761" data-lng="69.7544" data-coords="21.68° N, 69.75° E"><small>Porbandar Belt</small><strong>Ranavav</strong></div>
+                <div class="pj-loc-tile" data-group="coastal" data-zone="saurashtra" data-city="Junagadh" data-lat="21.5222" data-lng="70.4579" data-coords="21.52° N, 70.46° E"><small>Saurashtra</small><strong>Junagadh</strong></div>
+                <div class="pj-loc-tile" data-group="coastal" data-zone="saurashtra" data-city="Mendarda" data-lat="21.3189" data-lng="70.4408" data-coords="21.32° N, 70.44° E"><small>Saurashtra</small><strong>Mendarda</strong></div>
+                <div class="pj-loc-tile" data-group="coastal" data-zone="saurashtra" data-city="Keshod" data-lat="21.3005" data-lng="70.2496" data-coords="21.30° N, 70.25° E"><small>Saurashtra</small><strong>Keshod</strong></div>
+                <div class="pj-loc-tile" data-group="coastal" data-zone="saurashtra" data-city="Dwarka" data-lat="22.2442" data-lng="68.9685" data-coords="22.24° N, 68.97° E"><small>Coastal &amp; Upcoming</small><strong>Dwarka</strong></div>
+                <div class="pj-loc-tile" data-group="coastal" data-zone="saurashtra" data-city="Lambabandar" data-lat="21.8940" data-lng="69.3167" data-coords="21.89° N, 69.32° E"><small>Coastal Belt</small><strong>Lambabandar</strong></div>
+                <div class="pj-loc-tile" data-group="urban" data-zone="urban" data-city="Surat" data-lat="21.1702" data-lng="72.8311" data-coords="21.17° N, 72.83° E"><small>South Gujarat</small><strong>Surat</strong></div>
+                <div class="pj-loc-tile" data-group="urban" data-zone="urban" data-city="Ahmedabad" data-lat="23.0225" data-lng="72.5714" data-coords="23.02° N, 72.57° E"><small>Corporate Base</small><strong>Ahmedabad</strong></div>
+                <div class="pj-loc-tile" data-group="frontier" data-zone="frontier" data-city="Ganeshpura" data-lat="22.5480" data-lng="72.2260" data-coords="22.55° N, 72.23° E"><small>Lothal Belt</small><strong>Ganeshpura</strong></div>
+                <div class="pj-loc-tile" data-group="frontier" data-zone="frontier" data-city="Dholera SIR" data-lat="22.2475" data-lng="72.1930" data-coords="22.25° N, 72.19° E"><small>Current &amp; Upcoming</small><strong>Dholera SIR</strong></div>
+                <div class="pj-loc-tile" data-group="frontier" data-zone="frontier" data-city="Lothal World Heritage Project" data-lat="22.5215" data-lng="72.2493" data-coords="22.52° N, 72.25° E"><small>Heritage Anchor</small><strong>Lothal World Heritage Project</strong></div>
+                <div class="pj-loc-tile" data-group="frontier" data-zone="frontier" data-city="Memar &amp; Pipli" data-lat="22.5810" data-lng="72.2750" data-coords="22.58° N, 72.28° E"><small>Current &amp; Upcoming</small><strong>Memar &amp; Pipli</strong></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 5. Interactive Scale & 7 Categories Explorer -->
+        <section class="pj-scale">
+          <div class="pj-scale-box reveal">
+            <div>
+              <p class="section-kicker"><span class="kicker-line"></span> Portfolio Scale · 7 Categories</p>
+              <h2 style="color:var(--navy);font-family:var(--serif);font-size:clamp(1.9rem,3vw,2.9rem);font-weight:500;letter-spacing:-.04em;line-height:1.06;margin:0 0 12px">From ₹2 crore to <em>₹100 crore</em> projects.</h2>
+              <p style="color:var(--muted);font-size:14.5px;line-height:1.68;margin:0">Every project follows Arjan Odedra’s land-up model: bulk land acquisition, infrastructure development, and market delivery across seven categories.</p>
+
+              <div class="pj-scale-pills">
+                <button class="pj-cat-btn is-active" type="button" data-tag="01 · Townships & Communities" data-title="Residential projects" data-desc="Master-planned residential townships and plotted communities built from raw land across Gujarat." data-fill="86" data-range="₹2 Cr – ₹100 Cr">01 · Residential projects</button>
+                <button class="pj-cat-btn" type="button" data-tag="02 · Retail & Business Hubs" data-title="Commercial projects" data-desc="Strategic highway-frontage commercial blocks, retail hubs, and urban business spaces." data-fill="78" data-range="₹5 Cr – ₹80 Cr">02 · Commercial projects</button>
+                <button class="pj-cat-btn" type="button" data-tag="03 · Weekend & Green Land" data-title="Farmhouse projects" data-desc="Expansive green land developments crafted for serene private farmhouse living." data-fill="58" data-range="₹2 Cr – ₹45 Cr">03 · Farmhouse projects</button>
+                <button class="pj-cat-btn" type="button" data-tag="04 · Manufacturing & Logistics" data-title="Factory and industrial projects" data-desc="Purpose-built industrial plots, factory structures, and logistics-ready zones." data-fill="92" data-range="₹10 Cr – ₹100 Cr">04 · Factory and industrial projects</button>
+                <button class="pj-cat-btn" type="button" data-tag="05 · Civil Execution" data-title="Construction work" data-desc="Turnkey site engineering, internal road networks, utilities, and civil construction." data-fill="72" data-range="₹2 Cr – ₹75 Cr">05 · Construction work</button>
+                <button class="pj-cat-btn" type="button" data-tag="06 · Independent Living" data-title="Bungalows" data-desc="Spacious plotted bungalows built with architectural presence and privacy." data-fill="64" data-range="₹3 Cr – ₹55 Cr">06 · Bungalows</button>
+                <button class="pj-cat-btn" type="button" data-tag="07 · Community Housing" data-title="Tenament" data-desc="Well-planned row-housing and community tenement schemes delivering enduring value." data-fill="68" data-range="₹2 Cr – ₹60 Cr">07 · Tenament</button>
+              </div>
+            </div>
+
+            <div class="pj-scale-readout" data-tilt data-tilt-soft data-spotlight>
+              <div>
+                <small id="scale-tag">01 · Townships &amp; Communities</small>
+                <h3 id="scale-title">Residential projects</h3>
+                <p id="scale-desc">Master-planned residential townships and plotted communities built from raw land across Gujarat.</p>
+              </div>
+              <div>
+                <div class="pj-scale-meter"><span id="scale-bar"></span></div>
+                <div class="pj-scale-range">
+                  <span>Land-Up Delivery Scale</span>
+                  <strong id="scale-value-label">₹2 Cr – ₹100 Cr</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 6. Direct Project Inquiry Strip -->
+        <section class="pj-inquiry" id="project-inquiry">
+          <div class="pj-inquiry-inner">
+            <div class="quick-contact-card reveal" style="margin-top:0" data-spotlight>
+              <div class="quick-contact-head">
+                <div>
+                  <p class="section-kicker"><span class="kicker-line"></span> Project Desk · Gujarat</p>
+                  <h3>Inquire about a current or upcoming project</h3>
+                </div>
+                <p class="quick-contact-sub">Select a corridor below and connect directly with Rigima Crest Infra LLP on WhatsApp or call +91 88661 19598.</p>
+              </div>
+              <form class="quick-form" id="project-contact-form" novalidate>
+                <div class="quick-form-row">
+                  <label class="quick-field">
+                    <span>Full Name *</span>
+                    <input type="text" name="name" placeholder="Your name" required />
+                  </label>
+                  <label class="quick-field">
+                    <span>Phone / WhatsApp *</span>
+                    <input type="tel" name="phone" placeholder="+91 98XXX XXXXX" required />
+                  </label>
+                  <label class="quick-field">
+                    <span>Email</span>
+                    <input type="email" name="email" placeholder="you@example.com" />
+                  </label>
+                  <label class="quick-field">
+                    <span>Project / Corridor</span>
+                    <select name="interest" id="pj-interest-select">
+                      <option value="Lothal Area (Ganeshpura & Memar)">Lothal Area (Ganeshpura &amp; Memar)</option>
+                      <option value="Around Dholera SIR (Pachcham, Gamph, Tagdi, Fedra, Aakru)">Around Dholera SIR (5 Villages)</option>
+                      <option value="Upcoming: Dwarka">Upcoming: Dwarka</option>
+                      <option value="Upcoming: Dholera SIR">Upcoming: Dholera SIR</option>
+                      <option value="Upcoming: Memar — Near by Lothal">Upcoming: Memar — Near by Lothal</option>
+                      <option value="Upcoming: Pipli (Ahmedabad)">Upcoming: Pipli (Ahmedabad)</option>
+                      <option value="Bulk Land / Township Partnership">Bulk Land / Township Partnership</option>
+                    </select>
+                  </label>
+                </div>
+                <div class="quick-form-bottom">
+                  <label class="quick-field quick-field-msg">
+                    <span>Requirement Note</span>
+                    <input type="text" name="message" placeholder="Plot size, budget range (₹2 Cr – ₹100 Cr), or project query..." />
+                  </label>
+                  <button class="button button-gold cta-btn-glow quick-submit" type="submit">Send Inquiry <span>↗</span></button>
+                </div>
+                <div class="quick-form-status" id="project-form-status" role="status" aria-live="polite"></div>
+              </form>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div class="footer-grid">
+          <div class="footer-col footer-brand-col">
+            <a class="brand footer-brand" href="index.html"><img src="assets/logo.png" alt="Rigima Crest Infra LLP" /></a>
+            <p class="footer-note">Led by Arjan Odedra — Real Estate Developer and Township Builder in Gujarat, with 40+ years of experience and 35+ townships created (1991–2026).</p>
+            <div class="footer-socials" aria-label="Social media links">
+              <a class="social-wa" href="https://wa.me/918866119598" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2a9.94 9.94 0 0 0-8.5 15.08L2 22l5.07-1.48A9.96 9.96 0 1 0 12.04 2Zm5.8 14.08c-.24.68-1.4 1.3-1.94 1.37-.5.07-1.13.1-1.82-.12-.42-.14-.96-.32-1.65-.62-2.9-1.25-4.79-4.17-4.94-4.36-.14-.2-1.18-1.57-1.18-3 0-1.42.75-2.12 1.02-2.41.27-.29.59-.36.79-.36h.57c.18 0 .43-.07.67.51.24.58.83 2.02.9 2.17.07.15.12.33.02.52-.1.2-.14.32-.29.49-.15.17-.31.38-.44.51-.15.15-.3.31-.13.61.17.3.76 1.25 1.63 2.02 1.12 1 2.07 1.31 2.37 1.46.3.15.47.12.64-.07.17-.2.74-.86.94-1.16.2-.3.4-.25.67-.15.27.1 1.72.81 2.02.96.3.15.49.22.56.34.07.12.07.7-.17 1.38Z"/></svg>
+              </a>
+              <a class="social-ig" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9a5.5 5.5 0 0 1-5.5 5.5h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2Zm0 2A3.5 3.5 0 0 0 4 7.5v9A3.5 3.5 0 0 0 7.5 20h9a3.5 3.5 0 0 0 3.5-3.5v-9A3.5 3.5 0 0 0 16.5 4h-9Zm9.75 1.5a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z"/></svg>
+              </a>
+              <a class="social-fb" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 22v-8.2h2.75l.41-3.2H13.5V8.55c0-.93.26-1.56 1.59-1.56h1.7V4.12c-.3-.04-1.31-.12-2.49-.12-2.46 0-4.15 1.5-4.15 4.26v2.34H7.36v3.2h2.79V22h3.35Z"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="footer-col">
+            <h4>Quick Links</h4>
+            <ul class="footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Us &amp; Legacy</a></li>
+              <li><a href="index.html#services">Areas of Work</a></li>
+              <li><a href="projects.html">Current &amp; Upcoming Projects</a></li>
+              <li><a href="index.html#inquiry">Quick Inquiry</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>Key Focus Areas</h4>
+            <ul class="footer-links">
+              <li><a href="#current-projects">Lothal: Ganeshpura &amp; Memar</a></li>
+              <li><a href="#current-projects">Around Dholera SIR</a></li>
+              <li><a href="#upcoming-projects">Dwarka &amp; Dholera SIR</a></li>
+              <li><a href="#upcoming-projects">Memar &amp; Pipli (Ahmedabad)</a></li>
+              <li><a href="#footprint">Gujarat Footprint (1991–2026)</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>Contact Info</h4>
+            <ul class="footer-contact-list">
+              <li><span>Phone</span><a href="tel:+918866119598">+91 88661 19598</a></li>
+              <li><span>Email</span><a href="mailto:rigimacrestinfra9598@gmail.com">rigimacrestinfra9598@gmail.com</a></li>
+              <li><span>Office</span><p>Rigima Crest Infra LLP — 203, Parshwa Tower, Near Pakvan Restaurant, SG Highway, Bodakdev, Ahmedabad — 380015</p></li>
+              <li><span>Base</span><p>Gujarat, India</p></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <span>© 2026 Rigima Crest Infra LLP · All rights reserved</span>
+          <span>Arjan Odedra · 1991 – 2026 · 40+ Years · 35+ Townships</span>
+          <a href="mailto:rigimacrestinfra9598@gmail.com">rigimacrestinfra9598@gmail.com</a>
+        </div>
+      </footer>
+    </div>
+
+    <a class="whatsapp-float" href="https://wa.me/918866119598?text=Hello%20Rigima%20Crest%20Infra%20LLP%2C%20I%20would%20like%20to%20inquire%20about%20a%20project." target="_blank" rel="noopener noreferrer" aria-label="Chat with Rigima Crest on WhatsApp">
+      <span class="whatsapp-float-pulse" aria-hidden="true"></span>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2a9.94 9.94 0 0 0-8.5 15.08L2 22l5.07-1.48A9.96 9.96 0 1 0 12.04 2Zm5.8 14.08c-.24.68-1.4 1.3-1.94 1.37-.5.07-1.13.1-1.82-.12-.42-.14-.96-.32-1.65-.62-2.9-1.25-4.79-4.17-4.94-4.36-.14-.2-1.18-1.57-1.18-3 0-1.42.75-2.12 1.02-2.41.27-.29.59-.36.79-.36h.57c.18 0 .43-.07.67.51.24.58.83 2.02.9 2.17.07.15.12.33.02.52-.1.2-.14.32-.29.49-.15.17-.31.38-.44.51-.15.15-.3.31-.13.61.17.3.76 1.25 1.63 2.02 1.12 1 2.07 1.31 2.37 1.46.3.15.47.12.64-.07.17-.2.74-.86.94-1.16.2-.3.4-.25.67-.15.27.1 1.72.81 2.02.96.3.15.49.22.56.34.07.12.07.7-.17 1.38Z"/></svg>
+      <span class="whatsapp-float-label">WhatsApp</span>
+    </a>
+
+    <script src="vendor/leaflet/leaflet.js" defer></script>
+    <script src="script.js" defer></script>
+    <script src="projects.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,187 @@
+/* Projects Page — Architectural Corridor & Portfolio System */
+.pj-main{background:#fbfaf7}
+
+/* 1. Panoramic Command Hero */
+.pj-hero{background:radial-gradient(circle at 50% 10%,#0c395f 0%,#04182b 58%,#020f1c 100%);color:#fff;overflow:hidden;padding:64px 8% 72px;position:relative}
+.pj-hero:before{background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:68px 68px;content:"";inset:0;pointer-events:none;position:absolute}
+.pj-hero-glow{background:radial-gradient(circle,rgba(219,185,77,.2) 0%,transparent 70%);border-radius:50%;filter:blur(44px);height:440px;left:50%;pointer-events:none;position:absolute;top:-180px;transform:translateX(-50%);width:620px}
+.pj-hero-inner{margin:0 auto;max-width:1280px;position:relative;z-index:2}
+
+.pj-hero-top{align-items:flex-end;display:flex;flex-wrap:wrap;gap:24px 42px;justify-content:space-between;margin-bottom:40px}
+.pj-hero-top h1{font-family:var(--serif);font-size:clamp(2.7rem,4.6vw,4.85rem);font-weight:500;letter-spacing:-.055em;line-height:.98;margin:0}
+.pj-hero-top h1 em{background:linear-gradient(120deg,var(--gold),var(--gold-light),var(--gold));-webkit-background-clip:text;background-clip:text;color:transparent;font-style:italic;font-weight:500}
+.pj-hero-side{max-width:410px}
+.pj-hero-side p{color:#c0d0da;font-size:15px;line-height:1.7;margin:0 0 20px}
+.pj-hero-kpi-strip{display:flex;flex-wrap:wrap;gap:10px}
+.pj-kpi-chip{background:rgba(255,255,255,.06);border:1px solid rgba(240,212,132,.35);border-radius:999px;color:#edf4f7;font-size:11px;font-weight:600;padding:7px 14px;transition:background .25s ease,border-color .25s ease,transform .25s ease}
+.pj-kpi-chip strong{color:var(--gold-light);margin-right:5px}
+.pj-kpi-chip:hover{background:rgba(219,185,77,.18);border-color:var(--gold-light);transform:translateY(-2px)}
+
+/* Interactive 3-Panel Expanding Panorama */
+.pj-panorama{display:flex;gap:16px;min-height:360px}
+.pj-pano-card{background:#07233b;border:1px solid rgba(240,212,132,.36);border-radius:24px;cursor:pointer;flex:1;overflow:hidden;position:relative;transition:flex .55s cubic-bezier(.22,.8,.25,1),border-color .35s ease,box-shadow .35s ease}
+.pj-pano-card:hover,.pj-pano-card.is-active{border-color:var(--gold-light);box-shadow:0 28px 60px rgba(0,0,0,.45);flex:1.55}
+.pj-pano-card img{display:block;height:100%;inset:0;object-fit:cover;position:absolute;transition:transform .8s cubic-bezier(.22,.8,.25,1),filter .45s ease;width:100%}
+.pj-pano-card:hover img,.pj-pano-card.is-active img{transform:scale(1.06)}
+.pj-pano-card:before{background:linear-gradient(180deg,rgba(3,17,30,.12) 15%,rgba(3,17,30,.9) 100%);content:"";inset:0;position:absolute;z-index:1}
+.pj-pano-body{bottom:0;display:flex;flex-direction:column;left:0;padding:26px;position:absolute;right:0;z-index:2}
+.pj-pano-pill{align-self:flex-start;background:var(--gold);border-radius:999px;color:var(--navy);font-size:9px;font-weight:700;letter-spacing:.14em;margin-bottom:12px;padding:5px 11px;text-transform:uppercase}
+.pj-pano-pill.is-upcoming{background:rgba(4,29,49,.85);border:1px solid var(--gold);color:var(--gold-light)}
+.pj-pano-card h3{font-family:var(--serif);font-size:clamp(1.45rem,2.1vw,2rem);font-weight:500;margin:0 0 6px}
+.pj-pano-card p{color:#c9d7e0;font-size:13px;line-height:1.5;margin:0}
+.pj-pano-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
+.pj-pano-tags span{background:rgba(255,255,255,.1);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.18);border-radius:999px;color:#fff;font-size:10.5px;padding:4px 10px}
+
+/* 2. Current Projects Split Dossier */
+.pj-current{background:#fbfaf7;padding:90px 8%}
+.pj-wrap{margin:0 auto;max-width:1280px}
+.pj-head{align-items:flex-end;display:flex;flex-wrap:wrap;gap:16px 32px;justify-content:space-between;margin-bottom:46px}
+.pj-head h2{font-family:var(--serif);font-size:clamp(2.2rem,3.6vw,3.6rem);font-weight:500;letter-spacing:-.05em;line-height:1.04;margin:0}
+.pj-head h2 em{color:#b08216;font-style:italic}
+.pj-head-note{color:var(--muted);font-size:14px;line-height:1.65;margin:0;max-width:420px}
+
+.pj-dossier-stack{display:flex;flex-direction:column;gap:34px}
+.pj-dossier{align-items:stretch;background:#f2efe6;border:1px solid rgba(7,43,72,.11);border-radius:28px;display:grid;gap:0;grid-template-columns:1.02fr .98fr;overflow:hidden;transition:border-color .35s ease,box-shadow .35s ease}
+.pj-dossier:hover{border-color:rgba(219,185,77,.8);box-shadow:0 24px 52px rgba(7,43,72,.1)}
+.pj-dossier-flip{grid-template-columns:.98fr 1.02fr}
+.pj-dossier-flip .pj-dossier-media{order:2}
+.pj-dossier-media{min-height:380px;overflow:hidden;position:relative}
+.pj-dossier-media img{display:block;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.22,.8,.25,1);width:100%}
+.pj-dossier:hover .pj-dossier-media img{transform:scale(1.06)}
+.pj-dossier-media:after{background:linear-gradient(180deg,transparent 48%,rgba(4,24,40,.78) 100%);content:"";inset:0;position:absolute}
+.pj-dossier-badge{align-items:center;background:rgba(4,24,40,.85);backdrop-filter:blur(8px);border:1px solid rgba(240,212,132,.55);border-radius:999px;color:var(--gold-light);display:inline-flex;font-size:10px;font-weight:700;gap:7px;left:22px;letter-spacing:.15em;padding:7px 14px;position:absolute;text-transform:uppercase;top:22px;z-index:2}
+.pj-dossier-caption{bottom:20px;color:#fff;left:22px;position:absolute;right:22px;z-index:2}
+.pj-dossier-caption strong{display:block;font-family:var(--serif);font-size:20px;font-weight:500}
+.pj-dossier-caption small{color:#cfdce4;font-size:12px}
+
+.pj-dossier-body{display:flex;flex-direction:column;justify-content:center;padding:38px 40px}
+.pj-dossier-num{color:#b08216;font-size:10px;font-weight:700;letter-spacing:.2em;margin-bottom:10px;text-transform:uppercase}
+.pj-dossier-body h3{color:var(--navy);font-family:var(--serif);font-size:clamp(1.75rem,2.5vw,2.45rem);font-weight:500;letter-spacing:-.035em;margin:0 0 12px}
+.pj-dossier-body>p{color:var(--muted);font-size:14.5px;line-height:1.68;margin:0 0 22px}
+
+.pj-village-tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px}
+.pj-village-btn{background:#fff;border:1px solid rgba(7,43,72,.14);border-radius:999px;color:var(--navy);cursor:pointer;font-size:12px;font-weight:600;padding:8px 16px;transition:background .25s ease,border-color .25s ease,color .25s ease,transform .25s ease}
+.pj-village-btn:hover,.pj-village-btn.is-active{background:var(--navy);border-color:var(--navy);color:var(--gold-light);transform:translateY(-2px)}
+
+.pj-village-detail{background:#fff;border:1px solid rgba(7,43,72,.1);border-left:3px solid var(--gold);border-radius:14px;margin-bottom:22px;padding:16px 18px;transition:transform .25s ease}
+.pj-village-detail strong{color:var(--navy);display:block;font-family:var(--serif);font-size:17px;margin-bottom:4px}
+.pj-village-detail span{color:var(--muted);display:block;font-size:13px;line-height:1.55}
+
+.pj-dossier-actions{align-items:center;display:flex;flex-wrap:wrap;gap:16px}
+
+/* 3. Staggered Upcoming Horizons Step-Deck */
+.pj-upcoming{background:#efede4;padding:90px 8%}
+.pj-upcoming-grid{align-items:start;display:grid;gap:20px;grid-template-columns:repeat(4,minmax(0,1fr))}
+.pj-up-card{background:#fbfaf7;border:1px solid rgba(7,43,72,.11);border-radius:24px;box-shadow:0 14px 32px rgba(7,43,72,.07);display:flex;flex-direction:column;overflow:hidden;position:relative;transition:border-color .35s ease,box-shadow .35s ease,transform .35s ease}
+.pj-up-card:nth-child(even){margin-top:34px}
+.pj-up-card:hover{border-color:var(--gold);box-shadow:0 26px 52px rgba(7,43,72,.16)}
+.pj-up-media{height:230px;overflow:hidden;position:relative}
+.pj-up-media img{display:block;height:100%;object-fit:cover;transition:transform .7s cubic-bezier(.22,.8,.25,1);width:100%}
+.pj-up-card:hover .pj-up-media img{transform:scale(1.07)}
+.pj-up-media:after{background:linear-gradient(180deg,transparent 35%,rgba(4,24,40,.65) 100%);content:"";inset:0;position:absolute}
+.pj-up-tag{background:var(--navy);border:1px solid rgba(240,212,132,.55);border-radius:999px;color:var(--gold-light);font-size:9px;font-weight:700;left:14px;letter-spacing:.14em;padding:5px 11px;position:absolute;text-transform:uppercase;top:14px;z-index:2}
+.pj-up-num{bottom:12px;color:rgba(255,255,255,.88);font-family:var(--serif);font-size:28px;font-weight:500;left:16px;position:absolute;z-index:2}
+.pj-up-body{display:flex;flex:1;flex-direction:column;justify-content:space-between;padding:22px 22px 24px}
+.pj-up-body small{color:#a87b12;display:block;font-size:10px;font-weight:700;letter-spacing:.15em;margin-bottom:6px;text-transform:uppercase}
+.pj-up-body h3{color:var(--navy);font-family:var(--serif);font-size:23px;font-weight:600;margin:0 0 8px}
+.pj-up-body p{color:var(--muted);font-size:13px;line-height:1.55;margin:0 0 18px}
+.pj-up-cta{align-items:center;border-top:1px solid var(--line);color:var(--navy);display:flex;font-size:11.5px;font-weight:700;justify-content:space-between;padding-top:14px;transition:color .25s ease}
+.pj-up-cta i{align-items:center;background:#efeadd;border-radius:50%;display:flex;font-size:14px;font-style:normal;height:30px;justify-content:center;transition:background .25s ease,transform .3s ease;width:30px}
+.pj-up-card:hover .pj-up-cta i{background:var(--gold);transform:rotate(45deg)}
+
+/* 4. Interactive SVG Gujarat Corridor Radar & Explorer */
+.pj-explorer{background:var(--navy-deep);color:#fff;overflow:hidden;padding:96px 8%;position:relative}
+.pj-explorer:before{background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:64px 64px;content:"";inset:0;pointer-events:none;position:absolute}
+.pj-explorer-grid{align-items:center;display:grid;gap:48px;grid-template-columns:.95fr 1.05fr;margin:0 auto;max-width:1280px;position:relative;z-index:2}
+
+.pj-radar-card{background:linear-gradient(155deg,rgba(255,255,255,.065),rgba(255,255,255,.02));backdrop-filter:blur(10px);border:1px solid rgba(240,212,132,.38);border-radius:26px;overflow:hidden;padding:22px;position:relative}
+.pj-radar-head{align-items:center;display:flex;justify-content:space-between;margin-bottom:14px;position:relative;z-index:2}
+.pj-radar-head span{align-items:center;color:var(--gold-light);display:inline-flex;font-size:10px;font-weight:700;gap:6px;letter-spacing:.18em;text-transform:uppercase}
+.gj-map-actions{align-items:center;display:flex;flex-wrap:wrap;gap:6px}
+.gj-reset-btn{background:rgba(255,255,255,.08);border:1px solid rgba(240,212,132,.42);border-radius:999px;color:var(--gold-light);cursor:pointer;font-size:10.5px;font-weight:600;padding:5px 11px;transition:background .2s ease,color .2s ease}
+.gj-reset-btn:hover,.gj-reset-btn.is-active{background:var(--gold);border-color:var(--gold);color:var(--navy)}
+
+.gj-map-shell{border:1px solid rgba(240,212,132,.45);border-radius:18px;box-shadow:inset 0 0 0 1px rgba(7,43,72,.12);overflow:hidden;position:relative}
+.gj-leaflet-map{background:#e9e4d8;height:430px;width:100%;z-index:1}
+.gj-leaflet-map .leaflet-tile-pane{filter:saturate(.92) contrast(1.04)}
+.gj-leaflet-map .leaflet-control-zoom a{background:rgba(4,24,40,.92);border-color:rgba(240,212,132,.45);color:var(--gold-light)}
+.gj-leaflet-map .leaflet-control-zoom a:hover{background:var(--gold);color:var(--navy)}
+.gj-leaflet-map .leaflet-control-attribution{background:rgba(255,255,255,.82)!important;color:#334155!important;font-size:9px}
+.gj-leaflet-map .leaflet-control-attribution a{color:#072b48!important}
+
+/* Custom Animated Leaflet Markers & Route */
+.gj-marker{background:transparent;border:0}
+.gj-marker-wrap{align-items:center;display:flex;height:28px;justify-content:center;position:relative;width:28px}
+.gj-marker-pulse{animation:gj-pin-ping 2.4s ease-out infinite;background:rgba(7,43,72,.24);border:1.5px solid #dbb94d;border-radius:50%;height:24px;position:absolute;width:24px}
+.gj-marker-dot{background:#041d31;border:2.5px solid #dbb94d;border-radius:50%;box-shadow:0 3px 10px rgba(4,29,49,.45);height:12px;position:relative;transition:transform .25s ease,background .25s ease,border-color .25s ease;width:12px;z-index:2}
+.gj-marker.is-active .gj-marker-dot{background:#dbb94d;border-color:#041d31;box-shadow:0 0 0 4px rgba(219,185,77,.35),0 6px 14px rgba(4,29,49,.45);transform:scale(1.3)}
+.gj-marker.is-active .gj-marker-pulse{background:rgba(219,185,77,.42);border-color:#041d31}
+@keyframes gj-pin-ping{0%{opacity:.9;transform:scale(.55)}100%{opacity:0;transform:scale(1.65)}}
+
+.gj-live-route{animation:gj-dash-flow 18s linear infinite}
+@keyframes gj-dash-flow{to{stroke-dashoffset:-260}}
+
+.gj-popup .leaflet-popup-content-wrapper{background:rgba(4,24,40,.94);border:1px solid rgba(240,212,132,.55);border-radius:12px;box-shadow:0 16px 36px rgba(0,0,0,.45);color:#fff}
+.gj-popup .leaflet-popup-tip{background:rgba(4,24,40,.94)}
+.gj-popup-inner{padding:2px 4px}
+.gj-popup-inner small{color:var(--gold-light);display:block;font-size:9px;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
+.gj-popup-inner strong{display:block;font-family:var(--serif);font-size:15px;font-weight:500;margin:2px 0}
+.gj-popup-inner span{color:#b7c9d4;font-size:11px}
+
+.pj-radar-caption{align-items:center;border-top:1px solid rgba(255,255,255,.12);color:#b7c9d4;display:flex;flex-wrap:wrap;font-size:12px;gap:8px 16px;justify-content:space-between;margin-top:14px;padding-top:14px;position:relative;z-index:2}
+.pj-radar-caption strong{color:var(--gold-light)}
+.pj-loc-tile{cursor:pointer}
+.pj-loc-tile.is-selected{background:rgba(219,185,77,.18);border-color:var(--gold-light);transform:translateY(-3px)}
+
+.pj-filter-tabs{display:flex;flex-wrap:wrap;gap:8px;margin:22px 0 24px}
+.pj-tab{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.16);border-radius:999px;color:#d6e2ea;cursor:pointer;font-size:11.5px;font-weight:600;padding:9px 16px;transition:background .25s ease,border-color .25s ease,color .25s ease,transform .25s ease}
+.pj-tab:hover,.pj-tab.is-active{background:var(--gold);border-color:var(--gold);color:var(--navy);transform:translateY(-2px)}
+
+.pj-location-grid{display:grid;gap:10px;grid-template-columns:repeat(3,minmax(0,1fr))}
+.pj-loc-tile{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.14);border-radius:14px;cursor:default;padding:13px 15px;transition:background .25s ease,border-color .25s ease,transform .25s ease}
+.pj-loc-tile:hover{background:rgba(219,185,77,.16);border-color:var(--gold-light);transform:translateY(-4px)}
+.pj-loc-tile.is-hidden{display:none}
+.pj-loc-tile small{color:var(--gold-light);display:block;font-size:9px;font-weight:700;letter-spacing:.14em;margin-bottom:4px;text-transform:uppercase}
+.pj-loc-tile strong{display:block;font-family:var(--serif);font-size:16px;font-weight:500}
+
+/* 5. Interactive Scale & 7 Categories Explorer */
+.pj-scale{background:#fbfaf7;padding:86px 8%}
+.pj-scale-box{background:#f2efe6;border:1px solid rgba(7,43,72,.12);border-radius:28px;display:grid;gap:36px;grid-template-columns:1fr 1fr;margin:0 auto;max-width:1280px;padding:42px}
+.pj-scale-pills{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+.pj-cat-btn{background:#fff;border:1px solid rgba(7,43,72,.13);border-radius:14px;color:var(--navy);cursor:pointer;font-size:13px;font-weight:600;padding:11px 16px;transition:background .25s ease,border-color .25s ease,color .25s ease,transform .25s ease}
+.pj-cat-btn:hover,.pj-cat-btn.is-active{background:var(--navy);border-color:var(--navy);color:var(--gold-light);transform:translateY(-3px)}
+.pj-scale-readout{background:linear-gradient(155deg,#072b48 0%,#041a2d 100%);border:1px solid rgba(219,185,77,.42);border-radius:22px;color:#fff;display:flex;flex-direction:column;justify-content:space-between;padding:30px}
+.pj-scale-readout small{color:var(--gold-light);font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase}
+.pj-scale-readout h3{font-family:var(--serif);font-size:30px;font-weight:500;margin:10px 0}
+.pj-scale-readout p{color:#c0d0da;font-size:14px;line-height:1.65;margin:0 0 22px}
+.pj-scale-meter{background:rgba(255,255,255,.12);border-radius:999px;height:6px;margin-bottom:10px;overflow:hidden;width:100%}
+.pj-scale-meter span{background:linear-gradient(90deg,var(--gold),var(--gold-light));border-radius:999px;display:block;height:100%;transition:width .45s cubic-bezier(.22,.8,.25,1);width:78%}
+.pj-scale-range{color:var(--gold-light);display:flex;font-size:11px;font-weight:700;justify-content:space-between;letter-spacing:.1em;text-transform:uppercase}
+
+/* 6. Direct Project Inquiry Strip */
+.pj-inquiry{background:var(--navy-deep);color:#fff;padding:76px 8%}
+.pj-inquiry-inner{margin:0 auto;max-width:1280px}
+
+@media(max-width:1240px){
+  .pj-hero,.pj-current,.pj-upcoming,.pj-explorer,.pj-scale,.pj-inquiry{padding-left:5%;padding-right:5%}
+}
+@media(max-width:1100px){
+  .pj-panorama{flex-direction:column;min-height:0}
+  .pj-pano-card{min-height:240px}
+  .pj-dossier,.pj-dossier-flip{grid-template-columns:1fr}
+  .pj-dossier-flip .pj-dossier-media{order:0}
+  .pj-dossier-media{min-height:280px}
+  .pj-upcoming-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .pj-up-card:nth-child(even){margin-top:0}
+  .pj-explorer-grid,.pj-scale-box{grid-template-columns:1fr}
+}
+@media(max-width:600px){
+  .pj-hero{padding:36px 5.5% 48px}
+  .pj-pano-card{min-height:215px}
+  .pj-pano-body{padding:18px}
+  .pj-current,.pj-upcoming,.pj-explorer,.pj-scale,.pj-inquiry{padding:54px 5.5%}
+  .pj-dossier-body{padding:24px 20px}
+  .gj-leaflet-map{height:300px}
+  .pj-upcoming-grid,.pj-location-grid{grid-template-columns:1fr}
+  .pj-scale-box{padding:24px 18px}
+}

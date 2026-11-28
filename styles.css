@@ -311,24 +311,44 @@ body.is-loading{overflow:hidden}
 @keyframes wa-pulse{0%{opacity:.7;transform:scale(.96)}100%{opacity:0;transform:scale(1.36)}}
 
 /* Laptop, Desktop & Mobile Screen Optimization */
+@media(max-width:1380px){
+  .video-hero{height:clamp(480px,calc(100svh - 116px),780px)}
+  .section-pad,.about-section,.owners-section,.projects-reference,.trust-section,.site-footer{padding-left:5.5%;padding-right:5.5%}
+}
 @media(max-width:1240px){
   .site-header{padding:0 4.5%}
-  .site-nav{gap:22px}
+  .brand{width:166px}
+  .site-nav{gap:20px}
   .section-pad,.about-section,.owners-section,.projects-reference,.trust-section,.site-footer{padding-left:5%;padding-right:5%}
   .about-panel{gap:5%}
   .owners-inner{gap:5%}
   .glance-item strong{font-size:clamp(18px,1.8vw,24px)}
+  .trust-item{gap:12px;padding:14px 18px}
+  .trust-item strong{font-size:14px;white-space:normal}
 }
 @media(max-width:1100px){
-  .site-nav{gap:16px}
+  .brand{width:152px}
+  .site-nav{gap:14px}
   .site-nav>a{font-size:11.5px}
-  .nav-call{padding:10px 14px}
+  .nav-call{padding:10px 14px;white-space:nowrap}
+  .trust-strip{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .trust-item:nth-child(2):after{display:none}
+  .trust-item:nth-child(-n+2){border-bottom:1px solid rgba(7,43,72,.12)}
   .work-areas-bento{grid-template-columns:1fr}
   .work-area-hero{min-height:240px}
   .atlas-corridors{grid-template-columns:1fr}
   .cta-grid{grid-template-columns:1fr}
   .quick-form-row{grid-template-columns:repeat(2,minmax(0,1fr))}
   .footer-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:960px){
+  .announcement-copy{display:none}
+  .site-header{height:76px}
+  .menu-toggle{cursor:pointer;display:flex;flex-direction:column;gap:6px;padding:8px;z-index:52}
+  .menu-toggle span{background:var(--navy);display:block;height:2px;transition:transform .3s;width:25px}
+  .site-nav{align-items:flex-start;background:var(--cream);box-shadow:0 15px 30px rgba(4,29,49,.14);display:flex;flex-direction:column;gap:22px;padding:92px 7% 32px;position:absolute;right:0;top:0;transform:translateY(-115%);transition:transform .35s;width:100%;z-index:50}
+  .site-nav.open{transform:translateY(0)}
+  .site-nav>a{font-size:14px}
 }
 @media(max-width:900px){
   .glance-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
@@ -339,29 +359,45 @@ body.is-loading{overflow:hidden}
   .projects-reference .project-card:last-child .project-image{height:225px}
 }
 @media(max-width:600px){
+  .announcement-bar{justify-content:center;padding:8px 4%}
+  .eyebrow{letter-spacing:.1em;text-align:center}
+  .site-header{height:70px;padding:0 5%}
+  .brand{width:142px}
+  .video-hero{height:clamp(340px,54svh,520px);min-height:340px}
   .loader-logo-wrap{padding:24px 28px}
   .loader-logo{width:min(220px,62vw)}
   .loader-tagline{font-size:9.5px;letter-spacing:.2em}
   .loader-progress-meta{font-size:9px;letter-spacing:.12em}
+  .about-media{height:245px}
   .about-media-video{border-radius:18px}
   .about-media:before{border-radius:18px}
-  .glance-bar{margin-top:38px;padding-top:26px}
-  .glance-grid{grid-template-columns:1fr}
-  .glance-item:last-child{grid-column:auto}
-  .glance-item strong{font-size:21px}
-  .work-areas{border-radius:20px;padding:22px 18px}
+  .glance-bar{margin-top:34px;padding-top:24px}
+  .glance-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+  .glance-item{padding:16px 14px}
+  .glance-item:last-child{grid-column:1/-1}
+  .glance-item strong{font-size:18px}
+  .owner-card{grid-template-columns:108px 1fr}
+  .owner-photo{height:100%;min-height:132px}
+  .owner-monogram{font-size:30px;height:66px;width:66px}
+  .owner-number{font-size:16px;left:10px;top:10px}
+  .owner-meta{padding:14px 16px}
+  .owner-meta h3{font-size:18px}
+  .owner-meta p{font-size:9.5px;margin:4px 0 10px}
+  .work-areas{border-radius:20px;padding:22px 16px}
   .work-areas-subgrid{grid-template-columns:1fr}
-  .footprint-atlas{border-radius:20px;padding:26px 20px}
-  .corridor-card{padding:20px 18px}
-  .contact-cta{padding-bottom:72px;padding-top:72px}
+  .filter-row{gap:6px}
+  .filter{padding:9px 13px}
+  .footprint-atlas{border-radius:20px;padding:26px 18px}
+  .corridor-card{padding:20px 16px}
+  .contact-cta{padding-bottom:68px;padding-top:68px}
   .cta-orbit-inner{display:none}
-  .cta-monolith{padding:28px 20px}
-  .monolith-stats strong{font-size:17px}
-  .quick-contact-card{border-radius:18px;margin-top:28px;padding:20px 16px}
+  .cta-monolith{padding:26px 18px}
+  .monolith-stats strong{font-size:16px}
+  .quick-contact-card{border-radius:18px;margin-top:26px;padding:20px 16px}
   .quick-form-row,.quick-form-bottom{grid-template-columns:1fr}
   .quick-submit{width:100%}
-  .site-footer{padding:46px 6% 24px}
-  .footer-grid{gap:28px;grid-template-columns:1fr;padding-bottom:32px}
+  .site-footer{padding:44px 5.5% 24px}
+  .footer-grid{gap:26px;grid-template-columns:1fr;padding-bottom:30px}
   .whatsapp-float{bottom:16px;height:50px;padding:0 12px;right:16px}
   .whatsapp-float svg{height:24px;width:24px}
   .whatsapp-float:hover .whatsapp-float-label{display:none}
@@ -375,8 +411,8 @@ html{scrollbar-gutter:stable}
 /* Full 3D Hover System, Layered Depth & Section Animations */
 .scroll-progress{background:linear-gradient(90deg,var(--gold),var(--gold-light),#5cc0d9);height:3px;left:0;position:fixed;top:0;transform:scaleX(0);transform-origin:left;transition:transform .08s linear;width:100%;z-index:9998}
 
-.reveal{opacity:0;transform:perspective(1000px) translateY(30px) rotateX(4deg);transition:opacity .75s cubic-bezier(.22,.8,.25,1),transform .8s cubic-bezier(.22,.8,.25,1);transition-delay:var(--stagger,0ms)}
-.reveal.is-visible{opacity:1;transform:perspective(1000px) translateY(0) rotateX(0deg)}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .75s cubic-bezier(.22,.8,.25,1),transform .8s cubic-bezier(.22,.8,.25,1);transition-delay:var(--stagger,0ms)}
+.reveal.is-visible{opacity:1;transform:translateY(0)}
 
 [data-tilt]{--mx:50%;--my:50%;transform-style:preserve-3d;transition:transform .45s cubic-bezier(.22,1,.36,1),box-shadow .35s ease,border-color .35s ease,background .35s ease;will-change:transform}
 [data-tilt].is-tilting{transition:box-shadow .25s ease,border-color .25s ease,background .25s ease}
